@@ -5,7 +5,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 # Simply the artifact path
 ARG artifact=target/Insurance-Management
 
-WORKDIR /INSURANCE-mANAGEMENT/target
+WORKDIR /INSURANCE-mANAGEMENT
 
 COPY ${artifact} app.jar
 
