@@ -7,7 +7,7 @@ ARG artifact=target/Insurance-Management
 
 WORKDIR /INSURANCE-mANAGEMENT/target
 
-COPY ${artifact} app.jar
+COPY ${artifact} INSURANCE-mANAGEMENT.jar
 
 # This should not be changed
 ENTRYPOINT ["java","-jar","app.jar"]
