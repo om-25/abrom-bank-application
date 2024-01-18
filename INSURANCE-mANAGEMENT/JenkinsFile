@@ -7,14 +7,8 @@ pipeline {
         git branch: 'master', url: 'https://github.com/om-25/abrom-bank-application.git'
       }
     }
-    stage('Build and Test') {
-      steps {
-        sh 'ls -ltr'
-          
-        // build the project and create a JAR file
-        sh 'cd INSURANCE-mANAGEMENT/  && mvn clean install'
-      }
-    }
+
+
     stage('Static Code Analysis') {
       environment {
         SONAR_URL = "http:3.108.215.158:9000"
@@ -25,6 +19,8 @@ pipeline {
         }
       }
     }
+    
+   
     stage('Build and Push Docker Image') {
      environment {
      DOCKER_IMAGE = "om25/Insurance-Management:${BUILD_NUMBER}"
