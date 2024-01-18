@@ -23,7 +23,7 @@ pipeline {
    
     stage('Build and Push Docker Image') {
      environment {
-     DOCKER_IMAGE = "om25/Insurance-Management:${BUILD_NUMBER}"
+     DOCKER_IMAGE = "om25/abrom-bank-app:${BUILD_NUMBER}"
          DOCKERFILE_LOCATION = "INSURANCE-mANAGEMENT/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
